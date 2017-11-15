@@ -1,0 +1,16 @@
+Tipos de Registros:
+
+01 - Evento
+02 - Organizador
+03 - Instituição de Ensino
+04 - Participante
+05 - Palestrante
+06 - Palestra
+07 - Evento / Organizador / Instituição de Ensino
+08 - Palestrante / Palestra
+09 - Agenda de Palestras
+10 - Agenda de Participantes
+
+
+Objeto Agenda tem atividades
+Objeto Agenda tem método localiza atividade
