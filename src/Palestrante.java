@@ -6,21 +6,21 @@ public class Palestrante extends Pessoa{
 	String id;
 	String curriculo;
 	String telefone;
-	ArrayList<String> palestras;
+	ArrayList<String> idPalestras;
 	
 	public Palestrante(String id, String nome, String email,  String curriculo, String telefone) {
 		super(nome, email);
 		this.id = id;
 		this.curriculo = curriculo;
 		this.telefone = telefone;
-		this.palestras= new ArrayList<String>();
+		this.idPalestras= new ArrayList<String>();
 		setCount(getCount() + 1);
 	}
 
 	public static void setCount(int count) {
-		Organizador.count = count;
+		Palestrante.count = count;
 	}
-	
+
 	public static int getCount() {
 		return count;
 	}
@@ -33,13 +33,18 @@ public class Palestrante extends Pessoa{
 		return id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getCurriculo() {
+		return curriculo;
+	}
+
+	public String getTelefone() {
+		return telefone;
 	}
 
 	@Override
 	public String toString() {
-		String ret = "    [" + id + "] " + nome + "\t\t Email: " + email;
+		String ret = "    [" + id + "] " + nome + "  Email: " + email + "  Fone: " + telefone;
+		ret += "\n          Currículo: "+ curriculo + "\n";
 		return ret;
 	}
 

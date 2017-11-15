@@ -27,6 +27,7 @@ onde seja possível:
 
     Este sistema será desenvolvido até o final do semestre, e para esta primeira versão, você deve 
     permitir a criação de:
+	
 	um evento;
 	com duas salas de palestras;
 	quatro palestras;

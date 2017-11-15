@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 
-public class CSVParser {
+public class EventoCSVParser {
 
 
 	public static void lerArquivo(Evento evt, String filename, String delimiter) {
@@ -30,6 +30,9 @@ public class CSVParser {
 		            break;
 			    case "04":
 			    	incluirParticipante(evt,sc);
+		            break;
+			    case "05":
+			    	incluirPalestrante(evt,sc);
 		            break;
 			    
 			    default:
@@ -63,6 +66,13 @@ public class CSVParser {
 	private static void incluirParticipante(Evento evt, Scanner sc) {
 		if (Participante.getCount() < Participante.getMax())
 			evt.participantes.add(new Participante(sc.next(),sc.next(),sc.next()));
+		else
+			Tools.msg(Tools.MSG_01);
+	}
+
+	private static void incluirPalestrante(Evento evt, Scanner sc) {
+		if (Palestrante.getCount() < Palestrante.getMax())
+			evt.palestrantes.add(new Palestrante(sc.next(),sc.next(),sc.next(),sc.next(),sc.next()));
 		else
 			Tools.msg(Tools.MSG_01);
 	}

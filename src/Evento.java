@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Evento {
 	static int count = 0;
@@ -10,12 +9,7 @@ public class Evento {
 	ArrayList<Organizador> organizadores;
 	ArrayList<InstEnsino> instEnsino;
 	ArrayList<Participante> participantes;
-	
-
-	
-	
-	
-	
+	ArrayList<Palestrante> palestrantes;
 	
 	
 	public Evento(String id, String nome, String data) {
@@ -25,6 +19,7 @@ public class Evento {
 		this.organizadores = new ArrayList<Organizador>();
 		this.instEnsino = new ArrayList<InstEnsino>();
 		this.participantes = new ArrayList<Participante>();
+		this.palestrantes = new ArrayList<Palestrante>();
 	}
 
 	public String getId() {
@@ -60,6 +55,7 @@ public class Evento {
 		mostrarOrganizadores(ll);
 		mostrarInstEnsino(ll);
 		mostrarParticipantes(ll);
+		mostrarPalestrantes(ll);
 		
 		
 		
@@ -99,6 +95,17 @@ public class Evento {
 		System.out.print(Tools.repeatStr("-",ll) + "\n");
 	}
 
+	private void mostrarPalestrantes(int ll) {
+		System.out.println("  Palestrante(s):");
+		for( Palestrante p : palestrantes )
+		{
+		      System.out.print(p.toString());
+		}
+		System.out.print(Tools.repeatStr("-",ll) + "\n");
+	}
+
+
+	
 	
 	@Override
 	public String toString() {
