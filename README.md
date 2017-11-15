@@ -1,7 +1,7 @@
-# Trabalho de Implementação
+# EventOrg 
 ### Algoritmos e Programação II - ADS - SENACRS - 201702
 
-<b>Leitura de arquivos texto em Java.</b>
+<b>Trabalho de Implementação.</b>
 
 <dl>
   <dt>Objetivo</dt>
@@ -20,10 +20,13 @@ onde seja possível:
     Palestrantes podem submeter palestras para o evento;
     Palestrantes devem fornecer, além dos dados das palestras, um currículo, um email, e um telefone;
     Participantes do evento devem fornecer o seu nome e um email;
-    O sistema deve emitir um certificado, para palestrantes, organizadores e participantes do evento, de acordo com a sua participação no evento.
-    O sistema deve carregar e salvar os dados a partr de arquivos texto, utilizando o formato CSV (Comma Separated Values).
+    O sistema deve emitir um certificado, para palestrantes, organizadores e participantes do evento, 
+    de acordo com a sua participação no evento.
+    O sistema deve carregar e salvar os dados a partr de arquivos texto, utilizando o formato 
+    CSV (Comma Separated Values).
 
-	Este sistema será desenvolvido até o final do semestre, e para esta primeira versão, você deve permitir a criação de:
+    Este sistema será desenvolvido até o final do semestre, e para esta primeira versão, você deve 
+    permitir a criação de:
 	um evento;
 	com duas salas de palestras;
 	quatro palestras;
