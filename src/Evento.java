@@ -137,7 +137,7 @@ public class Evento {
 		}
 	}
 
-	public Palestrante getByIdPalestrante(String p_id) {
+	Palestrante getByIdPalestrante(String p_id) {
 		Palestrante ret = null;
 		for( Palestrante p : palestrantes ) {
 			if (p.getId().equals(p_id))
@@ -155,6 +155,14 @@ public class Evento {
 		return ret;
 	}
 		
+	Atividade getByIdAtividade(String a_id) {
+		Atividade ret = null;
+		for( Atividade a : atividades ) {
+			if (a.getId().equals(a_id))
+				ret = a;
+		}
+		return ret;
+	}
 		
 		
 	
