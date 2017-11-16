@@ -8,7 +8,7 @@ public class EventOrgMain {
 		
 		evento.mostrarEvento();
 		
-//		System.out.println( "\n\n+++++++++++++++++++++\n"+evento.palestrantes.get(0));
+//		System.out.println( "\n\n+++++++++++++++++++++\n"+evento.getByIdPalestra("002"));
 
 	}
 

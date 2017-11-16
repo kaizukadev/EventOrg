@@ -140,7 +140,7 @@ public class Evento {
 	public Palestrante getByIdPalestrante(String p_id) {
 		Palestrante ret = null;
 		for( Palestrante p : palestrantes ) {
-			if (p.getId() == p_id)
+			if (p.getId().equals(p_id))
 				ret = p;
 		}
 		return ret;
@@ -149,7 +149,7 @@ public class Evento {
 	public Palestra getByIdPalestra(String p_id) {
 		Palestra ret = null;
 		for( Palestra p : palestras ) {
-			if (p.id == p_id)
+			if (p.getId().equals(p_id))
 				ret = p;
 		}
 		return ret;

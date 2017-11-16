@@ -45,7 +45,7 @@ public class Palestrante extends Pessoa{
 	public String toString() {
 		String ret = "    [" + id + "] " + nome + "  Email: " + email + "  Fone: " + telefone;
 		ret += "\n          Currículo: "+ curriculo + "\n";
-		ret += "\n idPalestras=" + idPalestras + "\n";
+//		ret += "\n idPalestras=" + idPalestras + "\n";
 		return ret;
 	}
 

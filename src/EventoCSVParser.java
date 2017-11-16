@@ -108,7 +108,7 @@ public class EventoCSVParser {
 	}
 
 	private static void incluirAtividade(Evento evt, Scanner sc) {
-		evt.atividades.add(new Atividade(sc.next(),sc.next(),sc.next(),evt.getByIdPalestrante(sc.next()),evt.getByIdPalestra(sc.next())));
+		evt.atividades.add(new Atividade(sc.next(),sc.next(),sc.next(),sc.next(),sc.next()));
 	}
 
 }

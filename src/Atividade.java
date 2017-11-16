@@ -4,49 +4,65 @@ public class Atividade {
 	String id;    //Formato: 001
 	String sala;
 	String hora;
-	Palestra palestra;
-	Palestrante palestrante;
-	ArrayList<Participante> participantes;
+	String idPalestrante;
+	String idPalestra;
+	ArrayList<String> idParticipantes;
 
-	public Atividade(String id, String sala, String hora, Palestrante palestrante, Palestra palestra) {
+	public Atividade(String id, String sala, String hora, String idPalestrante, String idPalestra) {
 	
 		this.id = id;
 		this.sala = sala;
 		this.hora = hora;
-		this.palestra = palestra;
-		this.palestrante = palestrante;
-		this.participantes = new ArrayList<Participante>();
+		this.idPalestrante = idPalestrante;
+		this.idPalestra = idPalestra;
+		this.idParticipantes = new ArrayList<String>();
 	}
+
+
 
 	public String getId() {
 		return id;
 	}
 
+
+
 	public String getSala() {
 		return sala;
 	}
+
+
 
 	public String getHora() {
 		return hora;
 	}
 
-	public Palestra getPalestra() {
-		return palestra;
+
+
+	public String getIdPalestrante() {
+		return idPalestrante;
 	}
 
-	public Palestrante getPalestrante() {
-		return palestrante;
+
+
+	public String getIdPalestra() {
+		return idPalestra;
 	}
 
-	public ArrayList<Participante> getParticipantes() {
-		return participantes;
+
+
+	public ArrayList<String> getIdParticipantes() {
+		return idParticipantes;
 	}
+
+
 
 	@Override
 	public String toString() {
-		return "Atividade [id=" + id + ", sala=" + sala + ", hora=" + hora + ", palestra=" + palestra + ", palestrante="
-				+ palestrante + ", participantes=" + participantes + "]\n";
+		return "Atividade [id=" + id + ", sala=" + sala + ", hora=" + hora + ", idPalestrante=" + idPalestrante
+				+ ", idPalestra=" + idPalestra + ", idParticipantes=" + idParticipantes + "]\n";
 	}
+
+
 
 
 
