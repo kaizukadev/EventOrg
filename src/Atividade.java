@@ -8,14 +8,7 @@ public class Atividade {
 	Palestrante palestrante;
 	ArrayList<Participante> participantes;
 
-
-
-
-
-
-
-
-	public Atividade(String id, String sala, String hora, Palestra palestra, Palestrante palestrante) {
+	public Atividade(String id, String sala, String hora, Palestrante palestrante, Palestra palestra) {
 	
 		this.id = id;
 		this.sala = sala;
@@ -23,6 +16,36 @@ public class Atividade {
 		this.palestra = palestra;
 		this.palestrante = palestrante;
 		this.participantes = new ArrayList<Participante>();
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public String getSala() {
+		return sala;
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public Palestra getPalestra() {
+		return palestra;
+	}
+
+	public Palestrante getPalestrante() {
+		return palestrante;
+	}
+
+	public ArrayList<Participante> getParticipantes() {
+		return participantes;
+	}
+
+	@Override
+	public String toString() {
+		return "Atividade [id=" + id + ", sala=" + sala + ", hora=" + hora + ", palestra=" + palestra + ", palestrante="
+				+ palestrante + ", participantes=" + participantes + "]\n";
 	}
 
 

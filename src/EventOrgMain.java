@@ -7,6 +7,9 @@ public class EventOrgMain {
 		EventoCSVParser.lerArquivo(evento,filename,delimiter);
 		
 		evento.mostrarEvento();
+		
+//		System.out.println( "\n\n+++++++++++++++++++++\n"+evento.palestrantes.get(0));
+
 	}
 
 }

@@ -34,7 +34,20 @@ public class EventoCSVParser {
 			    case "05":
 			    	incluirPalestrante(evt,sc);
 		            break;
-			    
+			    case "06":
+			    	incluirPalestra(evt,sc);
+		            break;
+		        case "07":
+		        	System.out.println("\nOpção 07");
+		        	String ff = sc.next();
+		        	ff = sc.next();
+//			    	relacionarPalestrantePalestra(evt,sc);
+		            break;
+		        case "08":
+			    	incluirAtividade(evt,sc);
+		            break;
+		        case "09":
+		            break;
 			    default:
 			            Tools.msg("Tipo de registro inválido! Registro será desconsiderado.");
 			}			
@@ -75,6 +88,27 @@ public class EventoCSVParser {
 			evt.palestrantes.add(new Palestrante(sc.next(),sc.next(),sc.next(),sc.next(),sc.next()));
 		else
 			Tools.msg(Tools.MSG_01);
+	}
+
+	private static void incluirPalestra(Evento evt, Scanner sc) {
+		if (Palestra.getCount() < Palestra.getMax())
+			evt.palestras.add(new Palestra(sc.next(),sc.next(),sc.next()));
+		else
+			Tools.msg(Tools.MSG_01);
+	}
+
+	private static void relacionarPalestrantePalestra(Evento evt, Scanner sc) {
+//		System.out.println("comwwçou");
+//    	System.exit(0);
+
+		String x = sc.next();
+		String y = sc.next();
+		System.out.println("\n**************"+x+y+"\n");
+		evt.inserirPalestrantePalestra(x,y);
+	}
+
+	private static void incluirAtividade(Evento evt, Scanner sc) {
+		evt.atividades.add(new Atividade(sc.next(),sc.next(),sc.next(),evt.getByIdPalestrante(sc.next()),evt.getByIdPalestra(sc.next())));
 	}
 
 }

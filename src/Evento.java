@@ -10,6 +10,8 @@ public class Evento {
 	ArrayList<InstEnsino> instEnsino;
 	ArrayList<Participante> participantes;
 	ArrayList<Palestrante> palestrantes;
+	ArrayList<Palestra> palestras;
+	ArrayList<Atividade> atividades;
 	
 	
 	public Evento(String id, String nome, String data) {
@@ -20,6 +22,8 @@ public class Evento {
 		this.instEnsino = new ArrayList<InstEnsino>();
 		this.participantes = new ArrayList<Participante>();
 		this.palestrantes = new ArrayList<Palestrante>();
+		this.palestras = new ArrayList<Palestra>();
+		this.atividades = new ArrayList<Atividade>();
 	}
 
 	public String getId() {
@@ -56,6 +60,8 @@ public class Evento {
 		mostrarInstEnsino(ll);
 		mostrarParticipantes(ll);
 		mostrarPalestrantes(ll);
+		mostrarPalestras(ll);
+		mostrarAtividades(ll);
 		
 		
 		
@@ -104,8 +110,53 @@ public class Evento {
 		System.out.print(Tools.repeatStr("-",ll) + "\n");
 	}
 
+	private void mostrarPalestras(int ll) {
+		System.out.println("  Palestra(s):");
+		for( Palestra p : palestras )
+		{
+		      System.out.print(p.toString());
+		}
+		System.out.print(Tools.repeatStr("-",ll) + "\n");
+	}
 
-	
+	private void mostrarAtividades(int ll) {
+		System.out.println("  Atividade(s):");
+		for( Atividade a : atividades )
+		{
+		      System.out.print(a.toString());
+		}
+		System.out.print(Tools.repeatStr("-",ll) + "\n");
+	}
+
+	protected void inserirPalestrantePalestra(String idPalestrante, String idPalestra) {
+		System.out.println("\n&&&&&&&&&&&\nParametros: ["+idPalestrante+"]["+idPalestra+"]\n");
+		
+		Palestrante p = getByIdPalestrante(idPalestrante);
+		if (p != null) {
+			p.idPalestras.add(idPalestra);
+		}
+	}
+
+	public Palestrante getByIdPalestrante(String p_id) {
+		Palestrante ret = null;
+		for( Palestrante p : palestrantes ) {
+			if (p.getId() == p_id)
+				ret = p;
+		}
+		return ret;
+	}
+		
+	public Palestra getByIdPalestra(String p_id) {
+		Palestra ret = null;
+		for( Palestra p : palestras ) {
+			if (p.id == p_id)
+				ret = p;
+		}
+		return ret;
+	}
+		
+		
+		
 	
 	@Override
 	public String toString() {
