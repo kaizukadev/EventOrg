@@ -164,6 +164,13 @@ public class Evento {
 		return ret;
 	}
 		
+	protected void inserirAtividadeParticipante(String idAtividade, String idParticipante) {
+		Atividade a = getByIdAtividade(idAtividade);
+		if (a != null) {
+			a.idParticipantes.add(idParticipante);
+		}
+	}
+
 		
 	
 	@Override

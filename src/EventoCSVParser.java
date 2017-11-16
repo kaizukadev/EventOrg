@@ -38,15 +38,13 @@ public class EventoCSVParser {
 			    	incluirPalestra(evt,sc);
 		            break;
 		        case "07":
-		        	System.out.println("\nOpção 07");
-		        	String ff = sc.next();
-		        	ff = sc.next();
 //			    	relacionarPalestrantePalestra(evt,sc);
 		            break;
 		        case "08":
 			    	incluirAtividade(evt,sc);
 		            break;
 		        case "09":
+		        	relacionarAtividadeParticipante(evt,sc);
 		            break;
 			    default:
 			            Tools.msg("Tipo de registro inválido! Registro será desconsiderado.");
@@ -111,4 +109,11 @@ public class EventoCSVParser {
 		evt.atividades.add(new Atividade(sc.next(),sc.next(),sc.next(),sc.next(),sc.next()));
 	}
 
+	private static void relacionarAtividadeParticipante(Evento evt, Scanner sc) {
+		evt.inserirAtividadeParticipante(sc.next(),sc.next());
+	}
+
+	
+	
+	
 }

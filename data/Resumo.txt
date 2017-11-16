@@ -8,7 +8,7 @@ Tipos de Registros:
 06 - Palestra
 07 - Palestrante / Palestra
 08 - Agenda de Palestras    palestrante/palestra
-09 - Agenda de Participantes
+09 - Agenda de Participantes    atividade/participante
 
 
 Objeto Agenda tem atividades
